@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import Menu from './Menu/Menu'
 import './App.css';
 
+
 function App() {
+
+  // provide the menu items info as an array of objects, as follows
+  const menuItems = [
+    {name:"Home", href: "home"}, // You can ignore dropdown if not needed, or pass it as false
+    {name:"Portfolio", href: "portfolio", dropdown: true},
+    {name:"About", href:"about", dropdown:false}
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* right property aligns the menu to the right side */}
+      <Menu menuItems={menuItems} right />
     </div>
   );
 }
