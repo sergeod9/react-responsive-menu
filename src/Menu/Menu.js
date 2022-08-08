@@ -12,12 +12,13 @@ function Menu(props, padding = "5px"){
             <header className="navBrand">Nav Brand</header>
             <ul>
                 {props.menuItems.map((menuItem, index) => (
-                    <li className={`menu-item ${menuItem.dropdown ? "dropdown" : ""}`} key={index}>
+                    <li className={`menu-item ${menuItem.dropdown ? "dropdown" : ""}`} key={menuItem.id } id={menuItem.id}>
                         <a href={menuItem.href}>{menuItem.name}</a>
                         {menuItem.dropdown && <i className="dropdown-triangle"></i>}
                     </li>
                 ))}
             </ul>
+            
         </nav>
     )
 }
