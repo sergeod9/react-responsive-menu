@@ -79,7 +79,7 @@
     padding: 8px 16px;
 }
     .sub-menu-item:hover{
-        filter: brightness(110%);
+        filter: brightness(120%);
     }
 
 .sub-menu-item:not(:last-of-type){

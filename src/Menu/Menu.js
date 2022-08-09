@@ -6,13 +6,13 @@ function Menu(props){
     const menuSmallWidth = 400
     const breakpointSize = props.breakpoints.medium
     const direction = props.right ? 'right' : 'left'
-    const navBgColor = "#5389"
-    const sideMenuBgColor = "#538b"
-    const subMenuBgColor = "#85d8"
+    const navBgColor = "rgba(30,40,50,.6)"
+    const sideMenuBgColor = "rgba(30,40,50,.9)"
+    const subMenuBgColor = "rgba(25,30,40,.5)"
     const subMenuItemBgColor = "#8880"
-    const subMenuLineColor = '#888'
-    const menuTextColor = '#cc6'
-    const subMenuTextColor = '#dc3'
+    const subMenuLineColor = 'rgb(20,30,50)'
+    const menuTextColor = 'rgb(97,218,251)'
+    const subMenuTextColor = 'rgba(97,218,251,.8)'
 
     //const initialPageWidth = window.innerWidth
     const initialHamburgerState =  window.innerWidth < props.breakpoints.medium
