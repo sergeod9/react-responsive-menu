@@ -20,14 +20,6 @@ function Menu(props){
     const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
     const [isWindowResized, setIsWindowResized] = useState(false)
 
-
-    const hamburger = 
-        <div className="hamburger" onClick={toggleHamburger}>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-        </div>
-
     useEffect(()=>{
         window.addEventListener('resize', e => {
             window.innerWidth < breakpointSize ? setIsHamburger(true) : setIsHamburger(false)
@@ -68,7 +60,8 @@ function Menu(props){
                         backgroundColor: subMenuBgColor,
                         height: "0"},
         submenuItem: {borderColor:subMenuLineColor,
-                        backgroundColor: subMenuItemBgColor}
+                        backgroundColor: subMenuItemBgColor},
+        hamburgerButton:{backgroundColor: menuTextColor}
     }
 
     const styleLarge ={
@@ -114,6 +107,13 @@ function Menu(props){
     function toggleHamburger(){
         setIsSideMenuOpen(prev => !prev)
     }
+
+    const hamburger = 
+        <div className="hamburger" onClick={toggleHamburger}>
+            <div className="line"  style={styleSmall.hamburgerButton}></div>
+            <div className="line"  style={styleSmall.hamburgerButton}></div>
+            <div className="line"  style={styleSmall.hamburgerButton}></div>
+        </div>
 
     return(
         <>
