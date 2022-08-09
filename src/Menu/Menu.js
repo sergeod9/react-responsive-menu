@@ -7,7 +7,7 @@ function Menu(props){
     const breakpointSize = props.breakpoints.medium
     const direction = props.right ? 'right' : 'left'
     const navBgColor = "#5389"
-    const sideMenuBgColor = "#5389"
+    const sideMenuBgColor = "#538b"
     const subMenuBgColor = "#85d8"
     const subMenuItemBgColor = "#8880"
     const subMenuLineColor = '#888'
@@ -110,9 +110,9 @@ function Menu(props){
 
     const hamburger = 
         <div className="hamburger" onClick={toggleHamburger}>
-            <div className="line"  style={styleSmall.hamburgerButton}></div>
-            <div className="line"  style={styleSmall.hamburgerButton}></div>
-            <div className="line"  style={styleSmall.hamburgerButton}></div>
+            <div className={`line ${isSideMenuOpen && `hamburger-line-1`}`}  style={styleSmall.hamburgerButton} ></div>
+            <div className={`line ${isSideMenuOpen && `hamburger-line-2`}`}  style={styleSmall.hamburgerButton} ></div>
+            <div className={`line ${isSideMenuOpen && `hamburger-line-3`}`}  style={styleSmall.hamburgerButton} ></div>
         </div>
 
     return(

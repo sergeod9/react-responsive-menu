@@ -49,7 +49,7 @@ function App() {
     <div className="App">
       {/* right property aligns the menu to the right side */}
       <Menu menuItems={menuItems} breakpoints={breakpoints} right />
-      <img src='./logo512.png' width = '400' />
+      <img src='./logo512.png' width = '400' style={{display:"block", margin:"0 auto"}} />
     </div>
   );
 }
