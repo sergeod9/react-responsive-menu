@@ -54,13 +54,15 @@ function Menu(props){
         menuItem: {display: "block",
                         padding: "0",
                         top: "50px", margin: "30px 0",
-                        textAlign: "center"},
+                        textAlign: "center",
+                        fontSize: "1.6rem"},
         submenu: {width: "100%",
                         position: "relative",
                         backgroundColor: subMenuBgColor,
                         height: "0"},
         submenuItem: {borderColor:subMenuLineColor,
-                        backgroundColor: subMenuItemBgColor},
+                        backgroundColor: subMenuItemBgColor,
+                        fontSize: "1.6rem"},
         hamburgerButton:{backgroundColor: menuTextColor}
     }
 
@@ -122,7 +124,7 @@ function Menu(props){
             <header className="navBrand" style={{color: menuTextColor}}>Nav Brand</header>
             <ul className="menu-container" style={isHamburger ? styleSmall.menuContainer : styleLarge.menuContainer}>
                 {props.menuItems.map(menuItem => (
-                    <li className={`menu-item ${menuItem.dropdown ? "dropdown" : ""}`} 
+                    <li className={`menu-item ${menuItem.dropdown ? "dropdown" : ""} ${!isHamburger && "menu-item-large"}`} 
                         key={menuItem.id } 
                         id={menuItem.name}
                         style={isHamburger ? styleSmall.menuItem : styleLarge.menuItem}    
