@@ -39,11 +39,17 @@ function App() {
     {name:"About", href:"about", dropdown:false , id: nanoid() }
   ]
   
-  
+  const breakpoints = {
+      small: 320,
+      medium: 1024,
+      large: 1440
+  }
+
   return (
     <div className="App">
       {/* right property aligns the menu to the right side */}
-      <Menu menuItems={menuItems} right />
+      <Menu menuItems={menuItems} breakpoints={breakpoints} right />
+      <img src='./logo512.png' width = '400' />
     </div>
   );
 }
