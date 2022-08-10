@@ -45,6 +45,7 @@ Then you can use the Menu component in your App component:
     the products `submenu` can be provided within the `Products` object itself, but for readability, better to be provided as a separate array of objects, and passed later to the `submenu` key in the `Products` object. So the code above will become:
 
     ```javascript
+    // Creating the submenu that will be passed to the Products object
     const productsSubmenu = {
         {name: "First Product",
         href: "/first-product",
@@ -67,7 +68,7 @@ Then you can use the Menu component in your App component:
         name: "Products",
         dropdown: true,
         id: "someId-or-just-use-nanoid",
-        submenu: productsSubmenu,
+        submenu: productsSubmenu, // Passing the submenu to the Products object
       },
     ];
     ```
