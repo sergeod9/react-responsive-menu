@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 function Menu(props){
 
     const menuSmallWidth = 400
-    const breakpointSize = props.breakpoints.medium
+    const breakpointSize = props.breakpoint
     const direction = props.right ? 'right' : 'left'
     const navBgColor = "rgba(30,40,50,.6)"
     const sideMenuBgColor = "rgba(40,50,60,.9)"
@@ -15,7 +15,7 @@ function Menu(props){
     const subMenuTextColor = 'rgba(97,160,170,.8)'
 
     //const initialPageWidth = window.innerWidth
-    const initialHamburgerState =  window.innerWidth < props.breakpoints.medium
+    const initialHamburgerState =  window.innerWidth < props.breakpoint
     const [isHamburger, setIsHamburger] = useState(initialHamburgerState)
     const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
     const [isWindowResized, setIsWindowResized] = useState(false)
@@ -119,21 +119,31 @@ function Menu(props){
 
     return(
         <>
+        {/* Modal for small screens */}
         {(isHamburger && isSideMenuOpen) && <div className="modal-overlay" style={{opacity: '1'}} onClick={toggleHamburger}></div>}
+
+        {/* Menu */}
         <nav className={`navbar ${props.right ? "align-right" : ""}`} style={isHamburger ? styleSmall.navbar : styleLarge.navbar}>
             <header className="navBrand" style={{color: menuTextColor}}>Nav Brand</header>
             <ul className="menu-container" style={isHamburger ? styleSmall.menuContainer : styleLarge.menuContainer}>
+
+                {/* Menu Items */}
                 {props.menuItems.map(menuItem => (
                     <li className={`menu-item ${menuItem.dropdown ? "dropdown" : ""} ${!isHamburger && "menu-item-large"}`} 
                         key={menuItem.id } 
                         id={menuItem.name}
                         style={isHamburger ? styleSmall.menuItem : styleLarge.menuItem}    
                     >
-                        {menuItem.dropdown ? <span id={`${menuItem.name}-text`} style={{color: menuTextColor}}
-                                                onClick={(e) => toggleSubmenu(e,menuItem.name)}>
-                                                {menuItem.name}
-                                            </span> :
-                                            <a href={menuItem.href} style={{color: menuTextColor}}>{menuItem.name}</a>}
+                        {/* Creating dropdown menu items, and link menu items */}
+                        {menuItem.dropdown ? 
+                            <span id={`${menuItem.name}-text`} style={{color: menuTextColor}} 
+                                    onClick={(e) => toggleSubmenu(e,menuItem.name)}>
+                                    {menuItem.name}
+                            </span> :
+
+                            <a href={menuItem.href} style={{color: menuTextColor}}>{menuItem.name}</a>}
+
+                        {/* Submenus */}
                         {menuItem.dropdown && <>
                             <i className="dropdown-triangle" onClick={(e) => toggleSubmenu(e,menuItem.name)} style={{borderTopColor: menuTextColor}}>
                             </i>
@@ -148,6 +158,8 @@ function Menu(props){
                     </li>
                 ))}
             </ul>
+
+            {/* Hamburger Button */}
             {isHamburger && hamburger}
         </nav>
         </>
