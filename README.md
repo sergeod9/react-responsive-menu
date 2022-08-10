@@ -32,7 +32,7 @@ Then you can use the Menu component in your App component:
         name: "Products",
         dropdown: true,
         id: "someId-or-just-use-nanoid",
-        submenu: another_array_of_objects,
+        submenu: productsSubmenu,
       },
     ];
     ```
@@ -42,3 +42,35 @@ Then you can use the Menu component in your App component:
     also since the dropdown link is practically a nested menu, you need to pass a submenu object, which in turn is also an array of object.
 
     #### important: All submenu items mus be links, the Menu has 1 level of dropdown menus.
+
+    the products `submenu` can be provided within the `Products` object itself, but for readability, better to be provided as a separate array of objects, and passed later to the `submenu` key in the `Products` object. So the code above will become:
+
+    ```javascript
+    const productsSubmenu = {
+        {name: "First Product",
+        href: "/first-product",
+        id: "someId"
+        },
+        {name: "Second Product",
+        href: "/second-product",
+        id: "someId"
+        }
+    }
+
+    const menuItems = [
+      {
+        name: "Home",
+        href: "/",
+        dropdown: false,
+        id: "someId-or-just-use-nanoid",
+      },
+      {
+        name: "Products",
+        dropdown: true,
+        id: "someId-or-just-use-nanoid",
+        submenu: productsSubmenu,
+      },
+    ];
+    ```
+
+    Readme file in progress ...
