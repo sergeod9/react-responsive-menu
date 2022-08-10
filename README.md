@@ -7,6 +7,7 @@ This is a responsive menu for React applications, with the capability to include
 Downoload the Menu Folder which includes 2 files, menu.css and Menu.js. Or alternatively, download the whole repo, to examine usage within App.js that imports the Menu.
 Menu.js is the component file, you can import this into your react component using import, for instance, in the current example hierarchy, I created a folder called Menu, in which I included the Menu.js and menu.css files, I'm importing using using `import Menu from './Menu/Menu'` inside App.js in order to import the Menu component.
 Then you can use the Menu component in your App component:
+
 `<Menu menuItems={menuItems} breakpoint={1024} right />`
 
 ## Props and control variables:
@@ -36,7 +37,10 @@ Then you can use the Menu component in your App component:
     The second object is a dropdown menu, you do not need to provide an href key, but a dropdown key with a value of true instead.
     also since the dropdown link is practically a nested menu, you need to pass a submenu object, which in turn is also an array of object.
 
-    #### important: All submenu items mus be links, the Menu has 1 level of dropdown menus.
+    #### important:
+
+    - All submenu items must be links, the Menu has 1 level of dropdown menus.
+    - Objects `id` key is used as a react key in the `Menu` component when iterating using `map` higher order function. the value of `id` must follow react rules for providing `key` value.
 
     the products `submenu` can be provided within the `Products` object itself, but for readability, better to be provided as a separate array of objects, and passed later to the `submenu` key in the `Products` object. So the code above will become:
 
