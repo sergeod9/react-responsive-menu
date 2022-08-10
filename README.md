@@ -4,8 +4,8 @@ This is a responsive menu for React applications, with the capability to include
 
 ## Description
 
-Downoload the Menu Folder which includes 2 files, menu.css and Menu.js.
-Menu.js is the component file, you can import this into your react component using import, for instance, in the current hierarchy, I'm using:
+Downoload the Menu Folder which includes 2 files, menu.css and Menu.js. Or alternatively, download the whole repo, to examine usage within App.js that imports the Menu.
+Menu.js is the component file, you can import this into your react component using import, for instance, in the current example hierarchy, I created a folder called Menu, in which I included the Menu.js and menu.css files, I'm importing using using:
 
 ### import Menu from './Menu/Menu'
 
