@@ -60,6 +60,7 @@ function App() {
 
       {/* An example on using the menu with React Router library 'react-router-dom' */}
       <Routes>
+        {/* Simply iterating through the menu items objects, to create routes, with a minimal welcome message dynamically changing following each menu items's name */}
         {menuItems.map( item => !item.dropdown && <Route exact path={item.href} element ={<h1>Welcome to the {item.name} Page</h1>} /> )}
         {portfolioSubmenu.map ( item => !item.dropdown && <Route exact path={item.href} element ={<h1>Welcome to the {item.name} Page</h1>} /> )}
         {projectsSubmenu.map( item => !item.dropdown && <Route exact path={item.href} element ={<h1>Welcome to the {item.name} Page</h1>} /> )}
