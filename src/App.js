@@ -38,8 +38,8 @@ function App() {
   // provide the menu items info as an array of objects, as follows
   const menuItems = [
     {name:"Home", href: "/", id: nanoid() }, // You can ignore dropdown if not needed, or pass it as false
-    {name:"Portfolio", href: "/portfolio", dropdown: true , id: nanoid(), submenu:portfolioSubmenu },
-    {name:"Projects", href: "/projects", dropdown: true , id: nanoid(), submenu:projectsSubmenu },
+    {name:"Portfolio", dropdown: true , id: nanoid(), submenu:portfolioSubmenu },
+    {name:"Projects", dropdown: true , id: nanoid(), submenu:projectsSubmenu },
     {name:"About", href:"/about", dropdown:false , id: nanoid() }
   ]
   

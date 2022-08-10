@@ -16,4 +16,14 @@ Then you can use the Menu component in your App component:
 
 ## Props and control variables:
 
-Readme file is in progress...
+- ### Props passed to Menu component:
+  - #### menuItems: Array of objects
+    ''''javascript
+    const menuItems = [
+    {name: "Home", href: "/", dropdown: false, id:"someId-or-just-use-nanoid" },
+    {name: "Products", dropdown: true, id:"someId-or-just-use-nanoid", submenu: another_array_of_objects }
+    ]
+    As you can see in the example above, the first object in the array is a link to the home page, called 'Home', wich links to '/' path.
+    The second object is a dropdown menu, you do not need to provide an href key, but a dropdown key with a value of true instead.
+    also since the dropdown link is practically a nested menu, you need to pass a submenu object, which in turn is also an array of object.
+    #### important: All submenu items mus be links, the Menu has 1 level of dropdown menus.
