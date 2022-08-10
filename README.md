@@ -14,6 +14,7 @@ Then you can use the Menu component in your App component:
 
 ## Props and control variables:
 
+Using the Menu component within the App component:
 `<Menu menuItems={menuItems} breakpoint={1024} right />`
 
 - ### Props passed to Menu component:
