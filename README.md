@@ -12,9 +12,9 @@ Menu.js is the component file, you can import this into your react component usi
 inside App.js in order to import the Menu component
 Then you can use the Menu component in your App component:
 
-### <Menu />
-
 ## Props and control variables:
+
+`<Menu menuItems={menuItems} breakpoint={1024} right />`
 
 - ### Props passed to Menu component:
 
