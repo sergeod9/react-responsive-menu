@@ -1,6 +1,7 @@
 # Responsive Menu for React
 
 This is a responsive menu for React applications, with the capability to include dropdown menus, the repo includes and example on using React Router 'react-router-dom' library to showcase the menu's functionality, however, the Menu component itself doesn't make use of the React Router library, it only provides the URL, based on the menu objects passed from the App.js component.
+![](./react-responsive-menu-functionality.gif)
 
 ## Description
 

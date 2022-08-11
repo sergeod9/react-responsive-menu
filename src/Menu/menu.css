@@ -134,6 +134,7 @@ span{
     background-color: #0008;
     z-index: 2;
     position: fixed;
+    top: 0;
     opacity:0;
     transition: opacity 2s ease-in-out;
 }
