@@ -131,7 +131,7 @@ span{
 .modal-overlay{
     width: 100vw;
     height: 100vh;
-    background-color: #0008;
+    background-color: #0005;
     z-index: 2;
     position: fixed;
     top: 0;

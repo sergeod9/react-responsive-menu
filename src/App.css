@@ -1,11 +1,23 @@
 body{
-    background-color: rgb(34, 44, 53);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 h1{
     position: relative;
     color: white;
     top: 100px;
-    margin-left: 100px;
+    margin-left: 30px;
+    font-weight: 300;
+}
+strong{
+    font-weight: 900;
+}
+.App{
+  background: linear-gradient( to bottom right, rgb(21,88,153), rgb(21,152,88));
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }

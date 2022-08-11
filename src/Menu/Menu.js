@@ -6,12 +6,12 @@ function Menu(props){
     const menuSmallWidth = 400
     const breakpointSize = props.breakpoint
     const direction = props.right ? 'right' : 'left'
-    const navBgColor = "rgba(30,40,50,.6)"
-    const sideMenuBgColor = "rgba(40,50,60,.9)"
+    const navBgColor = "rgba(10,42,70,.4)"
+    const sideMenuBgColor = "rgba(10,42,70,.9)"
     const subMenuBgColor = "rgba(25,30,40,.5)"
     const subMenuItemBgColor = "#8880"
     const subMenuLineColor = 'rgb(20,30,50)'
-    const menuTextColor = 'rgb(97,160,170)'
+    const menuTextColor = 'rgb(180,230,240)'
     const subMenuTextColor = 'rgba(97,160,170,.8)'
 
     //const initialPageWidth = window.innerWidth
